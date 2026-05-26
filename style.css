@@ -1,0 +1,67 @@
+/* 1. Silly Animated Gradient Background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; /* A classic "silly" font choice */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: backgroundWave 10s ease infinite; /* Smoothly shifting background colors */
+}
+
+@keyframes backgroundWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Bouncing Rainbow Text */
+h1 {
+  font-size: 4rem;
+  text-shadow: 3px 3px 0px #ff00ff, 6px 6px 0px #00ffff; /* Fun layered shadow effect */
+  animation: bounce 0.5s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* 3. Colorful Custom Selection */
+::selection {
+  background-color: #ff00ff; /* Highlights text in hot pink */
+  color: white;
+}
+
+/* 4. Squiggly Wobbly Hover Effect */
+p:hover {
+  display: inline-block;
+  animation: wiggle 0.3s infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 5. Goofy Button with Glow */
+button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #f7d794;
+  box-shadow: 0 10px 0 #f5cd79; /* "Chunky" 3D button look */
+  transition: all 0.2s;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 5px 0 #f5cd79;
+}
