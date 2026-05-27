@@ -87,3 +87,4 @@ function addStickyNote() {
     text.selectAll();
     canvas.renderAll();
     }
+}
