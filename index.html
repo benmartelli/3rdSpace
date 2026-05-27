@@ -1,116 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <title>3rdSpace</title>
-   <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: sans-serif;
-            overflow: hidden; /* Canvas will handle the viewport sizing */
-        }
-        /* 1. The Container holding everything */
-        #site-wrapper {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-        /* 2. Your EXISTING website layer */
-        #original-website {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 40px;
-            box-sizing: border-box;
-            background: #ffffff; /* Your site's background color */
-            z-index: 1;
-            overflow-y: auto; /* Allows your website to scroll if content is long */
-        }
-        /* 3. The MIRO Canvas overlay layer */
-        .canvas-container {
-            position: absolute !important;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            /* Crucial: starts as pointer-events none so you can use your website normally */
-            pointer-events: none; 
-        }
-        /* When Miro mode is active, allow interacting with canvas elements */
-        .miro-mode-active .canvas-container {
-            pointer-events: auto;
-        }
-        /* 4. Mode Toggle Control UI */
-        #mode-controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999; /* Always on top */
-            background: rgba(255, 255, 255, 0.95);
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn {
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            background: white;
-            cursor: pointer;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        .btn.active {
-            background: #0070f3;
-            color: white;
-            border-color: #0070f3;
-        }
-        .toolbar {
-            display: none; /* Hidden by default, shows in Miro mode */
-            gap: 5px;
-        }
-        .miro-mode-active .toolbar {
-            display: flex;
-        }
-    </style>
+  <title>Home</title>
 </head>
 <body>
-
-  <div id="site-wrapper" class="web-mode-active">
-        
-        <div id="mode-controls">
-            <button id="btn-web" class="btn active" onclick="setMode('web')">🌐 View Website</button>
-            <button id="btn-miro" class="btn" onclick="setMode('miro')">✏️ Miro Board</button>
-            
-            <div class="toolbar" id="whiteboard-tools">
-                <button class="btn" onclick="addStickyNote()">➕ Add Note</button>
-                <button class="btn" onclick="toggleDrawing()">🖌️ Draw (Off)</button>
-                <button class="btn" style="color: red;" onclick="clearCanvas()">🗑️ Clear</button>
-            </div>
-        </div>
-
-        <div id="original-website">
-            <h1>3rd Space</h1>
-            <ul>
-              <li>31st May, 1 - 5 - Cityside</li>
-              <li>7th June, 1 - 5 - Cityside</li>
-            </ul>
-          
-            <a href="https://google.com" target="_blank" style="color: blue; font-weight: bold;">Test Link: Clickable in Website Mode!</a>
-        </div>
-
-        <canvas id="miro-canvas"></canvas>
-    </div>
-
-    <script src="app.js"></script>
+  <h1>3rd Space</h1>
+    <ul>
+      <li>31st May, 1 - 5 - Cityside</li>
+      <li>7th June, 1 - 5 - Cityside</li>
+    </ul>
 </body>
 </html>
