@@ -88,3 +88,4 @@ function addStickyNote() {
     canvas.renderAll();
     }
 }
+}
