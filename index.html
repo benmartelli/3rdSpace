@@ -32,6 +32,7 @@
             box-sizing: border-box;
             background: #ffffff; /* Your site's background color */
             z-index: 1;
+            overflow-y: auto; /* Allows your website to scroll if content is long */
         }
         /* 3. The MIRO Canvas overlay layer */
         .canvas-container {
@@ -83,12 +84,9 @@
     </style>
 </head>
 <body>
-  <h1>3rd Space</h1>
-    <ul>
-      <li>31st May, 1 - 5 - Cityside</li>
-      <li>7th June, 1 - 5 - Cityside</li>
-    </ul>
+
   <div id="site-wrapper" class="web-mode-active">
+        
         <div id="mode-controls">
             <button id="btn-web" class="btn active" onclick="setMode('web')">🌐 View Website</button>
             <button id="btn-miro" class="btn" onclick="setMode('miro')">✏️ Miro Board</button>
@@ -99,17 +97,21 @@
                 <button class="btn" style="color: red;" onclick="clearCanvas()">🗑️ Clear</button>
             </div>
         </div>
+
         <div id="original-website">
-            <h1>Welcome to 3rdspace.surf</h1>
+            <h1>3rd Space</h1>
+            <ul>
+              <li>31st May, 1 - 5 - Cityside</li>
+              <li>7th June, 1 - 5 - Cityside</li>
+            </ul>
+            
             <p>This is your actual website content remaining perfectly untouched in the background layer.</p>
             <a href="https://google.com" target="_blank" style="color: blue; font-weight: bold;">Test Link: Clickable in Website Mode!</a>
-            <br/><br/>
-            <div style="width: 200px; height: 200px; background: #f0f0f0; display: inline-block; padding: 10px;">
-                Existing site card element
-            </div>
         </div>
+
         <canvas id="miro-canvas"></canvas>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
