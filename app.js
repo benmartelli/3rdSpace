@@ -41,50 +41,49 @@ function setMode(mode) {
 
 // MIRO TOOL: Add a Sticky Note anywhere
 function addStickyNote() {
-    // Generate a group containing a yellow square and an editable text box
+    const leftPos = window.innerWidth / 2 - 75;
+    const topPos = window.innerHeight / 2 - 75;
+
+    // 1. Create the yellow background post-it
     const rect = new fabric.Rect({
         width: 150,
         height: 150,
         fill: '#fff7a1',
-        shadow: 'rgba(0,0,0,0.2) 3px 3px 7px'
+        shadow: 'rgba(0,0,0,0.15) 3px 3px 7px',
+        left: leftPos,
+        top: topPos,
+        hasControls: false // Keeps it a clean square shape
     });
 
-    const text = new fabric.IText('Type anywhere\n(Double click)', {
+    // 2. Create the editable text box layer
+    const text = new fabric.Textbox('Type here...', {
+        width: 130,
         fontSize: 16,
-        left: 15,
-        top: 15,
-        width: 120,
-        fontFamily: 'sans-serif'
+        left: leftPos + 10, // Slight padding from left edge
+        top: topPos + 15,   // Slight padding from top edge
+        fontFamily: 'sans-serif',
+        hasControls: false,
+        splitByGrapheme: true // Prevents words from breaking awkwardly
     });
 
-    const stickyNote = new fabric.Group([rect, text], {
-        left: window.innerWidth / 2 - 75,
-        top: window.innerHeight / 2 - 75,
+    // 3. Add them to the canvas as separate elements
+    canvas.add(rect);
+    canvas.add(text);
+
+    // 4. Group movement trick: When the text or rect moves, move the other!
+    text.on('moving', function () {
+        rect.set({ left: text.left - 10, top: text.top - 15 });
+        canvas.renderAll();
     });
 
-    canvas.add(stickyNote);
-    canvas.setActiveObject(stickyNote);
+    rect.on('moving', function () {
+        text.set({ left: rect.left + 10, top: rect.top + 15 });
+        canvas.renderAll();
+    });
+
+    // Automatically focus on the text box so the user can type immediately
+    canvas.setActiveObject(text);
+    text.enterEditing();
+    text.selectAll();
     canvas.renderAll();
-}
-
-// MIRO TOOL: Toggle Freestyle Brush Drawing
-function toggleDrawing() {
-    isDrawing = !isDrawing;
-    canvas.isDrawingMode = isDrawing;
-    
-    const drawBtn = document.getElementById('whiteboard-tools').children[1];
-    if (isDrawing) {
-        drawBtn.innerText = "🖌️ Drawing (ON)";
-        canvas.freeDrawingBrush.color = "#ff007f"; // Hot pink drawing line
-        canvas.freeDrawingBrush.width = 4;
-    } else {
-        drawBtn.innerText = "🖌️ Draw (Off)";
     }
-}
-
-// MIRO TOOL: Clear Canvas
-function clearCanvas() {
-    if(confirm("Are you sure you want to clear your board?")) {
-        canvas.clear();
-    }
-}
