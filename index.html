@@ -6,9 +6,48 @@
 </head>
 <body>
   <h1>3rd Space</h1>
-    <ul>
-      <li>20th June, 1-5pm, Cityside Church</li>
-      <li>28th June, 1:15-5pm, Cityside Church</li>
-    </ul>
+  <ul id="eventsList">
+    <li>Loading events…</li>
+  </ul>
+
+  <a href="rss.xml">
+    <img src="https://www.w3schools.com/xml/pic_rss.gif" width="36" height="14" alt="RSS feed">
+  </a>
+
+  <script>
+    async function loadEventsFromRss() {
+      try {
+        const response = await fetch('rss.xml');
+        if (!response.ok) throw new Error('Unable to load RSS');
+
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, 'application/xml');
+        const items = Array.from(xml.querySelectorAll('channel > item')).reverse();
+        const list = document.getElementById('eventsList');
+
+        if (items.length === 0) {
+          list.innerHTML = '<li>No events found in RSS.</li>';
+          return;
+        }
+
+        list.innerHTML = items.map(item => {
+          const title = item.querySelector('title')?.textContent?.trim() || 'Untitled event';
+          const description = item.querySelector('description')?.textContent?.trim() || title;
+          return `<li><strong>${title}</strong>: ${description}</li>`;
+        }).join('');
+      } catch (error) {
+        const list = document.getElementById('eventsList');
+        if (window.location.protocol === 'file:') {
+          list.innerHTML = '<li>Cannot load RSS from file://. Run a local server and open the page via http://localhost.</li>';
+        } else {
+          list.innerHTML = '<li>Error loading events.</li>';
+        }
+        console.error(error);
+      }
+    }
+
+    loadEventsFromRss();
+  </script>
 </body>
 </html>
