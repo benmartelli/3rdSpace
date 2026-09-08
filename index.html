@@ -35,7 +35,7 @@
         list.innerHTML = items.map(item => {
           const title = item.querySelector('title')?.textContent?.trim() || 'Untitled event';
           const description = item.querySelector('description')?.textContent?.trim() || title;
-          return `<li><strong${item.querySelector('item')?.id === 'thisweek' ? ' id="thisweek"' : ''}>${item}</strong>: ${description}</li>`;
+          return `<li><strong${item.querySelector('title')?.id === 'thisweek' ? ' id="thisweek"' : ''}>${title}</strong>: ${description}</li>`;
         }).join('');
       } catch (error) {
         const list = document.getElementById('eventsList');
