@@ -60,3 +60,7 @@ button:active {
   transform: translateY(4px);
   box-shadow: 0 5px 0 #f5cd79;
 }
+
+#thisweek {
+  color: red;
+}
