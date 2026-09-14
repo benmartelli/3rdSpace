@@ -22,9 +22,13 @@
     <description>1-5pm, Cityside Church (Come bake cookies with us for the striking PSA workers!)</description>
   </item>
   <item>
-    <title id="thisweek">Saturday 12th September</title>
+    <title>Saturday 12th September</title>
     <description>1-5pm, Cityside Church</description>
   </item> 
+  <item>
+    <title id="thisweek">Sunday 20th September</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
 </channel>
 
 </rss>
