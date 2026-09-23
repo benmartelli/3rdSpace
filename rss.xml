@@ -26,8 +26,12 @@
     <description>1-5pm, Cityside Church</description>
   </item> 
   <item>
-    <title id="thisweek">Sunday 20th September</title>
+    <title>Sunday 20th September</title>
     <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title id="thisweek">Saturday 26th September</title>
+    <description>1-5pm, Cityside Church (IWW will be making materials for zinefest!)</description>
   </item>
 </channel>
 
