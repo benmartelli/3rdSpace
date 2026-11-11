@@ -50,11 +50,15 @@
     <description>1-5pm, Cityside Church</description>
   </item>
   <item>
-    <title id="thisweek">Saturday 31th October</title>
+    <title>Saturday 31th October</title>
     <description>1-5pm, Cityside Church</description>
   </item>
   <item>
     <title>Saturday 7th November</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title id="thisweek">Sunday 15th November</title>
     <description>6-11pm, Cityside Church</description>
   </item>
 </channel>
