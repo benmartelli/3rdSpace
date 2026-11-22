@@ -62,7 +62,7 @@
     <description>6-11pm, Cityside Church</description>
   </item>
   <item>
-    <title>Saturday 28th November</title>
+    <title id="thisweek">Saturday 28th November</title>
     <description>6-11pm, Cityside Church</description>
   </item>
   <item>
@@ -74,7 +74,7 @@
     <description>6-11pm, Cityside Church</description>
   </item>
   <item>
-    <title id="thisweek">Sunday 20th December</title>
+    <title>Sunday 20th December</title>
     <description>6-11pm, Cityside Church</description>
   </item>
 </channel>
