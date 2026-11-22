@@ -58,7 +58,23 @@
     <description>6-11pm, Cityside Church</description>
   </item>
   <item>
-    <title id="thisweek">Sunday 15th November</title>
+    <title>Sunday 15th November</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Saturday 28th November</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Sunday 6th December</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Saturday 12th December</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title id="thisweek">Sunday 20th December</title>
     <description>6-11pm, Cityside Church</description>
   </item>
 </channel>
