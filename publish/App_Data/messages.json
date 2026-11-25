@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "dc2f7dee7c5e4a6dbf8d62d0d001fb81",
+    "Text": "Test message",
+    "CreatedAt": "2026-11-21T18:05:51.599495+00:00",
+    "Author": "Anonymous"
+  },
+  {
+    "Id": "5da7ee0c074049d69886e9a721dfc919",
+    "Text": "i\u0027ll bring the kai :)",
+    "CreatedAt": "2026-11-21T18:06:41.282612+00:00",
+    "Author": "Anonymous"
+  },
+  {
+    "Id": "af63a7a6086a4298b4e9b32f20068f2c",
+    "Text": "Controller test",
+    "CreatedAt": "2026-11-21T18:12:58.015036+00:00",
+    "Author": "Karel"
+  },
+  {
+    "Id": "884c80939a064069888d3e4177951721",
+    "Text": "Anonymous test",
+    "CreatedAt": "2026-11-21T18:12:58.081866+00:00",
+    "Author": "Anonymous"
+  }
+]

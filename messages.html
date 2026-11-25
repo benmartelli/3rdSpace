@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages | 3rd Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="messages-page">
+  <main class="messages-shell">
+    <header class="messages-header">
+      <div>
+        <a class="back-link" href="index.html">← 3rd Space</a>
+        <h1>Messages</h1>
+      </div>
+    </header>
+
+    <form id="messageForm" class="message-form">
+      <label for="messageText">Add a message</label>
+      <div class="message-input-row">
+        <input id="messageAuthor" name="author" type="text" maxlength="100" autocomplete="name" placeholder="Author (optional)">
+        <input id="messageText" name="text" type="text" maxlength="500" required autocomplete="off" placeholder="Write something…">
+        <button type="submit">Send</button>
+      </div>
+      <p id="messageStatus" class="message-status" role="status"></p>
+    </form>
+
+    <section aria-labelledby="messageListHeading">
+      <h2 id="messageListHeading">Latest messages</h2>
+      <div id="messageList" class="message-list">Loading messages…</div>
+      <nav id="pagination" class="pagination" aria-label="Message pages"></nav>
+    </section>
+  </main>
+
+  <script src="messages.js"></script>
+</body>
+</html>
