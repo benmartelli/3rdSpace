@@ -37,16 +37,44 @@
     <title>Sunday 4th October</title>
     <description>1-5pm, Cityside Church (followed by an IWW Postering run!)</description>
   </item>
-   <item>
+  <item>
     <title>Sunday 11th October</title>
     <description>1-5pm, Cityside Church</description>
   </item>
-   <item>
-    <title id="thisweek">Sunday 18th October</title>
+  <item>
+    <title>Sunday 18th October</title>
     <description>1-5pm, Cityside Church</description>
   </item>
-   <item>
+  <item>
     <title>Saturday 24th October</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Saturday 31th October</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Saturday 7th November</title>
+    <description>6-11pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Sunday 15th November</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title id="thisweek">Saturday 28th November</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Sunday 6th December</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Saturday 12th December</title>
+    <description>1-5pm, Cityside Church</description>
+  </item>
+  <item>
+    <title>Sunday 20th December</title>
     <description>1-5pm, Cityside Church</description>
   </item>
 </channel>
